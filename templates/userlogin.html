@@ -1,0 +1,63 @@
+{% extends "loginbase.html" %}
+{% block content %}
+
+<section class="bg-danger text-dark p-5 text-center">
+    <div class="container">
+        <center><h1> <span class="text-light">
+            User 
+        </span>
+        Login</h1></center>  
+
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-6">
+            <form action="/userlogin" method="post">
+                <br>
+                <table class="table">
+                    <tr>
+                        <td>Email</td>
+                        <td><input name="email" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input name="pass" type="password" class="form-control"></td>
+                    </tr>
+                    
+                </table>
+                <center><button type="submit" class="btn btn-primary">Login</button></center>
+            </form>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+
+</div>
+<br>
+<br>
+<center>
+   <h4>New User: &nbsp; &nbsp; <a href="/userregister" name="link">Click Here</a></h4> 
+</center>
+
+<br><br>
+{% if status %}
+
+<center><h5 style="color: red;">Invalid Email ID or Password</h5></center>
+
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

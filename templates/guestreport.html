@@ -1,0 +1,76 @@
+{% extends "guestbase.html" %}
+{% block content %}
+
+<section class="bg-danger text-dark p-5 text-center">
+    <div class="container">
+        <center><h1> <span class="text-light">
+            Report 
+        </span>
+        Crime</h1></center>  
+
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-6">
+
+            
+            <form action="/guestreport" method="post">
+                <br>
+                <table class="table">
+                   <tr>
+                       <td>Description</td>
+                       <td><div class="mb-3">
+                        <textarea name="des" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div></td>
+                   </tr>
+                   <tr>
+                       <td>Remarks</td>
+                       <td>
+                        <div class="mb-3">
+                            <textarea name="rem" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          </div>
+                       </td>
+                   </tr>
+                   <tr>
+                    <td>Date</td>
+                    <td><input value="text" name="date" type="date" class="form-control"></td>
+                </tr>
+                   
+                   
+                </table>
+                <center><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Report Crime
+                  </button></center>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Report Crime</h5>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          Are you sure you want to Report this crime?
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                          <button name="report" type="submit" class="btn btn-success">Report</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+            </form>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
